@@ -1,0 +1,18 @@
+.todolist-group {
+  .list-remove-btn {
+    font-size: 12px;
+    padding-left: 10px;
+    color: red;
+    cursor: pointer;
+    float: right;
+  }
+
+  .todo-list-item {
+    display: inline-flex;
+
+    .list-name {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

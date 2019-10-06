@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="form-group">
+    <div class="list-name">
+      <h3>{{currentList.name}}</h3>
+    </div>
+    <div class="input-group-prepend">
+      <input type="text" class="form-control" placeholder="Add Todo" name="todo" [(ngModel)]="todo"
+        (keyup.enter)="addTodoItem()">
+      <span class="input-group-text" (click)="addTodoItem()">Add</span>
+    </div>
+    <div class="todo-items">
+
+      <ul class="list-group todolist-group">
+        <li *ngFor="let todo of todoArray; let i=index" class="list-group-item todo-items">
+          <input type="checkbox" class="checkbox" [(ngModel)]="todo.completed" (change)="checkValue(todo)" />
+          <span [ngClass]=" {'checked': todo.completed}">{{ todo.title }}</span>
+          <button type="button" class="btn btn-dark btn-todoitem-remove" (click)="deleteTodoItem(todo)">X</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

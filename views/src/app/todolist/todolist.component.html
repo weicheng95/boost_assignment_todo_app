@@ -1,0 +1,10 @@
+<ul class="list-group todolist-group">
+  <li *ngFor="let item of todolists; let i=index" class="list-group-item todo-list-item">
+    <div (click)="listItemTrigger(item)" class="list-name">{{ item.name }}</div>
+    <span class="list-remove-btn" (click)="removeTodoList(item)">remove</span>
+  </li>
+  <li class="list-group-item">
+    <input type="text" class="form-control" placeholder="Add New List" name="listName" [(ngModel)]="listName">
+    <button type="button" class="btn btn-primary btn-block" (click)="addTodoList()">Add New List</button>
+  </li>
+</ul>
